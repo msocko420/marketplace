@@ -57,7 +57,7 @@ class  UIViewController {
     }
     
     func setupAdminAuthentication() {
-        let username = "miguellocko@gmail.com"
+        let username = "miguelsocko@gmail.com"
         let password = "Dangerous12$"
     }
     
