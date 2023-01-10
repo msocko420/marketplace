@@ -1,0 +1,192 @@
+import UIKit
+
+class  UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Create main UI elements
+        createUI()
+        openLoginPage()
+        setupAdminAuthentication()
+        createAdminControlPanel()
+    }
+    
+    func createUI() {
+        // Create search bar
+        let searchBar = UISearchBar()
+        searchBar.frame = CGRect( 10, y: 70, width: 375, height: 50)
+        searchBar.searchBarStyle = .prominent
+        searchBar.placeholder = "Search"
+        view.addSubview(searchBar)
+        
+        // Create table view
+        let tableView = UITableView()
+        tableView.frame = CGRect(x: 0, y: 130, width: 375, height: 500)
+        view.addSubview(tableView)
+        
+        // Create tab bar
+        let tabBar = UITabBar()
+        tabBar.frame = CGRect(x: 0, y: 640, width: 375, height: 80)
+        let categoriesTab = UITabBarItem(title: "Categories", image: nil, tag: 0)
+        let storesTab = UITabBarItem(title: "Stores", image: nil, tag: 1)
+        let cartTab = UITabBarItem(title: "Cart", image: nil, tag: 2)
+        tabBar.items = [categoriesTab, storesTab, cartTab]
+        view.addSubview(tabBar)
+    }
+    
+    func openLoginPage(){
+        let loginView = UIView()
+        loginView.frame = CGRect(x: 10, y: 70, width: 375, height: 50)
+        loginView.backgroundColor = .lightGray
+        view.addSubview(loginView)
+        
+        let usernameTextfield = UITextField()
+        usernameTextfield.frame = CGRect(x: 20, y: 10, width: 350, height: 30)
+        usernameTextfield.placeholder = "Username"
+        usernameTextfield.textAlignment = .center
+        usernameTextfield.backgroundColor = .white
+        loginView.addSubview(usernameTextfield)
+        
+        let passwordTextfield = UITextField()
+        passwordTextfield.frame = CGRect(x: 20, y: 40, width: 350, height: 30)
+        passwordTextfield.placeholder = "Password"
+        passwordTextfield.textAlignment = .center
+        passwordTextfield.backgroundColor = .white
+        loginView.addSubview(passwordTextfield)
+    }
+    
+    func setupAdminAuthentication() {
+        let username = "miguellocko@gmail.com"
+        let password = "Dangerous12$"
+    }
+    
+    func createAdminControlPanel(){
+        let controlPanel = UIView()
+        controlPanel.frame = CGRect(x: 10, y: 70, width: 375, height: 380)
+        controlPanel.backgroundColor = .lightGray
+        view.addSubview(controlPanel)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+import UIKit
+
+class UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Create main UI elements
+        createUI()
+        setupAdminAuthentication()
+        createAdminControlPanel()
+        createLoginPage()
+    }
+    
+    func createUI() {
+        // Create search bar
+        let searchBar = UISearchBar()
+        searchBar.frame = CGRect( 10, y: 70, width: 375, height: 50)
+        searchBar.searchBarStyle = .prominent
+        searchBar.
+
+
+
+
+
+
+
+import UIKit
+
+class UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Create main UI elements
+        createUI()
+        setupAuthentication()
+        setupAdminAuthentication()
+        createAdminControlPanel()
+    }
+    
+    func createUI() {
+        // Create search bar
+        let searchBar = UISearchBar()
+        searchBar.frame = CGRect( 10,  70, width: 375, height: 50)
+        searchBar.searchBarStyle = .prominent
+        searchBar.placeholder = "Search"
+        view.addSubview(searchBar)
+        
+        // Create table view
+        let tableView = UITableView()
+        tableView.frame = CGRect(x: 0, y: 130, width: 375, height: 500)
+        view.addSubview(tableView)
+        
+        // Create tab bar
+        let tabBar = UITabBar()
+        tabBar.frame = CGRect(x: 0, y: 640, width: 375, height: 80)
+        let categoriesTab = UITabBarItem(title: "Categories", image: nil, tag: 0)
+        let storesTab = UITabBarItem(title: "Stores", image: nil, tag: 1)
+        let cartTab = UITabBarItem(title: "Cart", image: nil, tag: 2)
+        tabBar.items = [categoriesTab, storesTab, cartTab]
+        view.addSubview(tabBar)
+    }
+    
+    func setupAuthentication(){
+        let loginPage = UIView()
+        loginPage.frame = CGRect(x: 10, y: 70, width: 375, height: 380)
+        view.addSubview(loginPage)
+        
+        let usernameField = UITextField()
+        let passwordField = UITextField()
+        let submitButton = UIButton()
+        
+        usernameField.frame = CGRect(x: 10, y: 70, width: 180, height: 30)
+        passwordField.frame = CGRect(x: 10, y: 110, width: 180, height: 30)
+        submitButton.frame = CGRect(x: 10, y: 150, width: 180, height: 50)
+        
+        usernameField.placeholder = "Username"
+        passwordField.placeholder = "Password"
+        passwordField.isSecureTextEntry = true
+        
+        submitButton.setTitle("Submit", for: .normal)
+        submitButton.addTarget(self, action: #selector(submitPressed), for: .touchUpInside)
+        
+        loginPage.addSubview(usernameField)
+        loginPage.addSubview(passwordField)
+        loginPage.addSubview(submitButton)
+    }
+    
+    @objc func submitPressed() {
+        // Add code to call authentication API and check credentials
+    }
+    
+    func setupAdminAuthentication() {
+        let username = "miguellocko@gmail.com"
+        let password = "Dangerous12$"
+    }
+    
+    func createAdminControlPanel(){
+        let controlPanel = UIView()
+        controlPanel.frame = CGRect(x: 10, y: 70, width: 375, height: 380)
+        controlPanel.backgroundColor = .lightGray
+        view.addSubview(controlPanel)
+    }
+    
+    // Add APIs
+    let firebase = FirebaseAPI()
+    let mapKit = MapKitAPI()
+    let twilio = TwilioAPI()
+}
